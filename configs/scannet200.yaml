@@ -28,12 +28,28 @@ segmenter2d:
 grounded_feature:
   granularity: 0.8 # only for SAM AutoMaskGen
 
+# data:
+#   dataset_name: 'scannet200'
+#   split_path: './open3dis/dataset/scannetv2_val.txt'
+#   datapath: './data/Scannet200/Scannet200_2D_5interval/val' # RGB-D + pose path
+#   gt_pth: './data/Scannet200/Scannet200_3D/val/groundtruth' # gt path
+#   original_ply: './data/Scannet200/Scannet200_3D/val/original_ply_files' # raw pcl
+#   spp_path: './data/Scannet200/Scannet200_3D/val/superpoints' # spp path
+#   cls_agnostic_3d_proposals_path: './data/Scannet200/Scannet200_3D/val/isbnet_clsagnostic_scannet200' # cls agnostic 3D proposals
+#   dc_features_path: './data/Scannet200/Scannet200_3D/val/dc_feat_scannet200' # spp feature path
+#   img_dim: [640, 480] # coord alignment
+#   rgb_img_dim: [1296, 968]
+#   cut_num_pixel_boundary: 10
+#   img_interval: 2
+#   num_classes: 198
+
+
 data:
   dataset_name: 'scannet200'
-  split_path: './open3dis/dataset/scannetv2_val.txt'
-  datapath: './data/Scannet200/Scannet200_2D_5interval/val' # RGB-D + pose path
-  gt_pth: './data/Scannet200/Scannet200_3D/val/groundtruth' # gt path
-  original_ply: './data/Scannet200/Scannet200_3D/val/original_ply_files' # raw pcl
+  split_path: './open3dis/dataset/scannet3_val.txt'
+  datapath: './data/Scannet200/Scannet200_2D_custom/val'
+  gt_pth: './data/Scannet200/Scannet200_3D/val/groundtruth'
+  original_ply: './data/Scannet200/Scannet200_3D/val/original_ply_files'
   spp_path: './data/Scannet200/Scannet200_3D/val/superpoints' # spp path
   cls_agnostic_3d_proposals_path: './data/Scannet200/Scannet200_3D/val/isbnet_clsagnostic_scannet200' # cls agnostic 3D proposals
   dc_features_path: './data/Scannet200/Scannet200_3D/val/dc_feat_scannet200' # spp feature path
@@ -42,7 +58,6 @@ data:
   cut_num_pixel_boundary: 10
   img_interval: 2
   num_classes: 198
-
 cluster:
   visi: 0.9 # iou
   recall: 0.9 # recall
